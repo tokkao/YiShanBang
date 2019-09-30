@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F5F5F5"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <EditText
+            android:id="@+id/edt_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="收货人姓名(请使用真实姓名)"
+            android:inputType="text"
+            android:maxLength="8"
+            android:maxLines="1"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_line"/>
+        <EditText
+            android:id="@+id/edt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="手机号码"
+            android:inputType="phone"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_line"/>
+        <EditText
+            android:id="@+id/edt_area"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="所在地区"
+            android:maxLength="50"
+            android:inputType="text"
+            android:maxLines="1"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_line"/>
+        <EditText
+            android:id="@+id/edt_details_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:background="@null"
+            android:gravity="top"
+            android:paddingTop="17dp"
+            android:hint="街道、小区门牌等详细地址"
+            android:inputType="textMultiLine"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:paddingBottom="13dp"
+            android:singleLine="false"
+            android:scrollHorizontally="false"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp"
+            android:maxLength="250"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/shape_radius5_green_7dd33c"
+        android:text="确认"
+        android:textColor="@color/text_white"
+        android:textSize="15sp" />
+</LinearLayout>

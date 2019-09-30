@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rlyt_tea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#7DD33C"
+        android:paddingRight="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableRight="@mipmap/ic_down_white"
+            android:drawablePadding="4dp"
+            android:paddingLeft="13dp"
+            android:paddingTop="8dp"
+            android:paddingRight="12dp"
+            android:paddingBottom="8dp"
+            android:text="北京"
+            android:textColor="#fff5f5f5"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@id/tv_city"
+            android:background="@drawable/shape_25radius_b0e489_bg"
+            android:drawableLeft="@mipmap/ic_search_white"
+            android:drawablePadding="14dp"
+            android:hint="请输入地址搜索附近门店"
+            android:imeOptions="actionSearch"
+            android:paddingLeft="15dp"
+            android:paddingTop="8dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="7dp"
+            android:singleLine="true"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="14sp" />
+        <!--<EditText
+            android:layout_width="287dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginLeft="75dp"
+            android:alpha="40"
+            android:background="@drawable/serach_circle"
+            android:hint="请输入地址搜索附近门店"
+            android:textColorHint="#FFFFFF"
+            android:drawableLeft="@drawable/fangdajing_min"
+            />-->
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        app:srlEnableAutoLoadMore="false"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/layout_view_no_data" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_tea"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rlyt_tea"
+                android:visibility="visible"
+                ></androidx.recyclerview.widget.RecyclerView>
+
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+
+
+</LinearLayout>

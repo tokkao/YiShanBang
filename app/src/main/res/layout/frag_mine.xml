@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F5F5F5"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlyt_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_mine_top_bg"
+            android:layout_width="match_parent"
+            android:layout_height="251dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/img_mine_top_bg" />
+
+        <RelativeLayout
+            android:id="@+id/rlyt_avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:layout_width="103dp"
+                android:layout_height="103dp"
+                android:src="@mipmap/img_mine_top_circle_bg" />
+
+            <com.benben.commoncore.widget.CircleImageView
+                android:id="@+id/civ_avatar"
+                android:layout_width="73dp"
+                android:layout_height="73dp"
+                android:layout_centerInParent="true"
+                android:src="@mipmap/icon_default_avatar" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlyt_avatar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:text="未登录"
+            android:textColor="@color/white"
+            android:textSize="17sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginRight="13dp"
+            android:visibility="visible"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_window_manage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/icon_window_manage"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:text="橱窗管理"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_my_homepage"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/icon_my_home_page"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:text="我的主页"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_my_account"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@mipmap/icon_my_account"
+                    android:gravity="center"
+                    android:paddingTop="10dp"
+                    android:text="我的账户"
+                    android:textColor="@color/color_333333"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/card_view"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_FFFFFF"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_my_coupon_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@mipmap/icon_my_vip_card"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="我的优惠卡"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <include layout="@layout/layout_mine_view_divider" />
+                <TextView
+                    android:id="@+id/tv_my_shopping_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@mipmap/icon_my_shopping_order"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="我的购物订单"
+                    android:visibility="visible"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <include layout="@layout/layout_mine_view_divider"
+                    android:visibility="visible"/>
+                <TextView
+                    android:id="@+id/tv_my_collection"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@mipmap/icon_my_collection"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="我的收藏"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <include layout="@layout/layout_mine_view_divider" />
+                <TextView
+                    android:id="@+id/tv_my_lottery"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@mipmap/icon_my_lottery"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="我的抽奖"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:background="@color/color_FFFFFF"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_shop_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@mipmap/icon_shop_center"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="商户中心"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <include android:visibility="visible"
+                    layout="@layout/layout_mine_view_divider" />
+                <TextView
+                    android:id="@+id/tv_milk_tea_order"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@mipmap/icon_milk_tea_order"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="奶茶订单"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/tv_shop_stationed"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@mipmap/icon_shop_stationed"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="商家入驻"
+                    android:visibility="visible"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <include android:visibility="visible"
+                    layout="@layout/layout_mine_view_divider" />
+
+                <TextView
+                    android:id="@+id/tv_service_manage"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@mipmap/icon_service_manage"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="服务管理"
+                    android:visibility="visible"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+                <include android:visibility="visible"
+                    layout="@layout/layout_mine_view_divider" />
+                <TextView
+                    android:id="@+id/tv_control_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="49dp"
+                    android:drawableLeft="@mipmap/icon_control_center"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:visibility="visible"
+                    android:paddingRight="13dp"
+                    android:text="控制中心"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+                <include android:visibility="visible"
+                    layout="@layout/layout_mine_view_divider" />
+                <TextView
+                    android:id="@+id/tv_account_setting"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:drawableLeft="@mipmap/icon_account_setting"
+                    android:drawableRight="@mipmap/icon_right_arrow"
+                    android:drawablePadding="14dp"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="13dp"
+                    android:paddingRight="13dp"
+                    android:text="账户设置"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>

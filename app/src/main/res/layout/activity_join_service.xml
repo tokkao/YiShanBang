@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/llyt_theme"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:text="选择主题"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_theme"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:drawableRight="@mipmap/icon_right_arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:text=""
+                android:textColor="@color/color_666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginLeft="13dp"
+            android:background="@color/view_line" />
+
+        <LinearLayout
+            android:id="@+id/llyt_service_mode"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:text="服务方式"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_mode"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white"
+                android:drawableRight="@mipmap/icon_right_arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical|right"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:text=""
+                android:textColor="@color/color_666666"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/view_line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_introduction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="16dp"
+                android:text="服务介绍"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_introduction"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_below="@id/tv_introduction"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/shape_feed_back_edit_bg"
+                android:gravity="top"
+                android:hint="请输入服务介绍"
+                android:maxLength="250"
+                android:padding="15dp"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_CCCCCC"
+                android:textSize="14sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/llyt_perfect_info"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="选择主题"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:drawableEnd="@mipmap/icon_right_arrow"
+            android:drawablePadding="10dp"
+            android:gravity="center_vertical|end"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="个人主页"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

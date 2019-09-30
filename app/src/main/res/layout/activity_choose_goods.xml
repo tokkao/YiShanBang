@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_FFFFFF"
+    android:clipChildren="false"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.tea.activity.ChooseGoodsActivity">
+
+    <LinearLayout
+        android:id="@+id/llyt_choose_goods"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/rlyt_choose_goods"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/common_title_bar" />
+
+        <ImageView
+            android:id="@+id/iv_shop_img"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_choose_good_bg" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rlv_choose_good_left"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:background="@color/bg_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_tea_cate"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:singleLine="true"
+                    android:text=""
+                    android:gravity="center_vertical"
+                    android:textColor="@color/color_333333"
+                    android:textSize="13sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rlv_choose_good_right"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_holder"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:background="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+
+    </View>
+    <RelativeLayout
+        android:id="@+id/rlyt_choose_goods"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/tea_choose_goods_bottom_shadow_bg"
+        android:clipChildren="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="68dp"
+                android:text="¥ "
+                android:textColor="#F67617"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_goods_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="0"
+                android:textColor="#F67617"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_choose_good_goto_pay"
+            android:layout_width="93dp"
+            android:layout_height="33dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="9dp"
+            android:background="@drawable/shape_5raduis_gradient_green"
+            android:text="立即支付"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="6dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <com.benben.commoncore.widget.badgeview.BGABadgeImageView
+            android:id="@+id/iv_shopping_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_shopping_car">
+
+        </com.benben.commoncore.widget.badgeview.BGABadgeImageView>
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

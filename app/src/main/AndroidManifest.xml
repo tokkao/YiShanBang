@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.benben.yishanbang">
+
+    <dist:module dist:instant="true" />
+    <uses-permission android:name="com.benben.yishanbang.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" /> <!-- 定位权限 -->
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- Required -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission
+        android:name="android.permission.ACCESS_MOCK_LOCATION"
+        tools:ignore="MockLocation,ProtectedPermissions" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <application
+        android:name=".MyApplication"
+        android:icon="@mipmap/icon_app_logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/customTheme"
+        android:supportsRtl="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:replace="android:name,android:theme">
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="5G5B3uFURwVzVtb72QnmxRglFPsEfYDd"
+            tools:replace="android:value" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
+
+        <activity
+            android:name="com.benben.yishanbang.ui.MainActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+
+        <activity
+            android:name=".ui.GuideActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- /////////////////////////登录\\\\\\\\\\\\\\\\\\\\\\\\\\\\ -->
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--账号密码登录-->
+        <activity
+            android:name=".ui.login.LoginCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--短信验证登录-->
+        <activity
+            android:name=".ui.login.ForgetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--忘记密码-->
+        <activity
+            android:name=".ui.login.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--注册-->
+
+        <!--///////////////////////优惠券\\\\\\\\\\\\\\\\\\\\\\\-->
+        <activity
+            android:name=".ui.discount.activity.SelectAreaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--选择地区-->
+        <activity
+            android:name=".ui.discount.activity.SearchActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--搜索过渡页-->
+        <activity
+            android:name=".ui.discount.activity.SearchDiscountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--搜索结果页（优惠券的）-->
+        <activity
+            android:name=".ui.discount.activity.BusinessDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--店铺详情（优惠券的）-->
+        <activity
+            android:name=".ui.discount.activity.DiscountGoodsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--商品详情页（优惠券的）-->
+        <activity
+            android:name=".ui.discount.activity.AnswerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--答题-->
+        <activity
+            android:name=".ui.home.activity.QRCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--扫码-->
+        <activity
+            android:name=".ui.home.activity.PageListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--扫码纸巾机显示列表-->
+        <activity
+            android:name=".ui.home.activity.PageDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--纸巾详情-->
+        <activity
+            android:name=".ui.home.activity.VideoPlayActivity"
+            android:screenOrientation="landscape"
+            android:theme="@style/customTheme" />
+        <!--视频播放-->
+
+        <!--个人资料-->
+        <activity
+            android:name=".ui.mine.activity.PersonalDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--我的购物订单-->
+        <activity
+            android:name=".ui.mine.activity.MyShoppingOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--橱窗管理-->
+        <activity
+            android:name=".ui.mine.activity.WindowManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--我的抽奖-->
+        <activity
+            android:name=".ui.mine.activity.MyLotteryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--我的收藏-->
+        <activity
+            android:name=".ui.mine.activity.MyCollectionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+
+
+        <!--//////////////////支付\\\\\\\\\\\\\\\\\\\\\\-->
+        <!--微信分享-->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="wx7625c60e7db96a31" />
+            </intent-filter>
+        </activity>
+        <!-- QQ -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="tencent101735719" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <!-- 支付宝支付 -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!--商店详情-->
+        <activity
+            android:name=".ui.tea.activity.StoresDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--选择商品-->
+        <activity
+            android:name=".ui.tea.activity.ChooseGoodsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--确认订单-->
+        <activity
+            android:name=".ui.tea.activity.ConfirmOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--用户中心-->
+        <activity
+            android:name=".ui.tea.activity.UserDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--他的动态-->
+        <activity
+            android:name=".ui.tea.activity.UserDynamicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--修改用户的优势-->
+        <activity
+            android:name=".ui.tea.activity.UpdateAdvantageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--修改用户的技能-->
+        <activity
+            android:name=".ui.tea.activity.UpdateSkillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--修改用户的应邀时间-->
+        <activity
+            android:name=".ui.tea.activity.UpdateInvitedTimeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--修改用户的线下服务价格-->
+        <activity
+            android:name=".ui.tea.activity.UpdateServicePriceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--订单详情-->
+        <activity
+            android:name=".ui.tea.activity.OrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--取餐码-->
+        <activity
+            android:name=".ui.tea.activity.TakeFoodCodeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--钱包-->
+        <activity
+            android:name=".ui.mine.activity.WalletActivity"
+            android:screenOrientation="portrait" />
+        <!--商户中心-->
+        <activity
+            android:name=".ui.mine.activity.ShopCenterActivity"
+            android:screenOrientation="portrait" />
+        <!--奶茶订单-->
+        <activity
+            android:name=".ui.mine.activity.MilkTeaOrderActivity"
+            android:screenOrientation="portrait" />
+        <!--奶茶订单详情-->
+        <!--商户入驻-->
+        <activity
+            android:name=".ui.mine.activity.ShopStationedActivity"
+            android:screenOrientation="portrait" />
+        <!--控制中心-->
+        <activity
+            android:name=".ui.mine.activity.ControlCenterActivity"
+            android:screenOrientation="portrait" />
+        <!--账户设置-->
+        <activity
+            android:name=".ui.mine.activity.SettingActivity"
+            android:screenOrientation="portrait" />
+        <!--关于我们-->
+        <activity
+            android:name=".ui.mine.activity.AboutUsActivity"
+            android:screenOrientation="portrait" />
+        <!--投诉建议-->
+        <activity
+            android:name=".ui.mine.activity.FeedBackActivity"
+            android:screenOrientation="portrait" />
+        <!--修改登录/支付密码-->
+        <activity
+            android:name=".ui.mine.activity.AccountSafeActivity"
+            android:screenOrientation="portrait" />
+        <!--服务管理-->
+        <activity
+            android:name=".ui.mine.activity.ServiceManageActivity"
+            android:screenOrientation="portrait" />
+        <!--我的技能-->
+        <activity
+            android:name=".ui.mine.activity.MySkillListActivity"
+            android:screenOrientation="portrait" />
+        <!--我的服务-->
+        <activity
+            android:name=".ui.mine.activity.MyServicesActivity"
+            android:screenOrientation="portrait" />
+        <!--服务详情-->
+        <activity
+            android:name=".ui.mine.activity.ServicesDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!--提现-->
+        <activity
+            android:name=".ui.mine.activity.WithdrawActivity"
+            android:screenOrientation="portrait" />
+        <!--明细-->
+        <activity
+            android:name=".ui.mine.activity.AccountDetailsActivity"
+            android:screenOrientation="portrait" />
+        <!--支付设置-->
+        <activity
+            android:name=".ui.mine.activity.PaySettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--支出和收益列表-->
+        <activity
+            android:name=".ui.mine.activity.ProfitWithAppriseListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--我的优惠卡-->
+        <activity
+            android:name=".ui.mine.activity.MyCouponCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--优惠卡详情-->
+        <activity
+            android:name=".ui.mine.activity.MyCouponCardDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--我的商品管理-->
+        <activity
+            android:name=".ui.mine.activity.GoodsManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--橱窗管理-商品详情-->
+        <activity
+            android:name=".ui.mine.activity.WindowManageGoodsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--橱窗管理-订单管理-->
+        <activity
+            android:name=".ui.mine.activity.OrderManageWindowActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--通用webview-->
+        <activity
+            android:name=".ui.NormalWebViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--订单管理-->
+        <activity
+            android:name=".ui.mine.activity.OrderManageTeaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--订单管理-订单详情-->
+        <activity
+            android:name=".ui.mine.activity.OrderManageOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--客户管理-->
+        <activity
+            android:name=".ui.mine.activity.ClientManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--核销订单-->
+        <activity
+            android:name=".ui.mine.activity.WriteOffCardOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--商户中心- 订单管理-->
+        <activity
+            android:name=".ui.mine.activity.OrderManageCardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--店铺管理-->
+        <activity
+            android:name=".ui.mine.activity.StoreManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--增加技能-->
+        <activity
+            android:name=".ui.mine.activity.AddSkillActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--实名认证-->
+        <activity
+            android:name=".ui.mine.activity.VerifiedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--绑定手机号-->
+        <activity
+            android:name=".ui.mine.activity.BindMobileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--收货地址管理-->
+        <activity
+            android:name=".ui.mine.activity.AddressManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--添加收货地址-->
+        <activity
+            android:name=".ui.mine.activity.AddAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--申请售后-->
+        <activity
+            android:name=".ui.mine.activity.ApplySaleActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--子账号管理-->
+        <activity
+            android:name=".ui.mine.activity.SubAccountManageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--添加/编辑 子账号-->
+        <activity
+            android:name=".ui.mine.activity.UpdateSubAccountActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--核销优惠卡订单详情-->
+        <activity
+            android:name=".ui.mine.activity.WriteOffCardOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--核销奶茶订单详情-->
+        <activity
+            android:name=".ui.mine.activity.WriteOffTeaOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--核销奶茶订单-->
+        <activity
+            android:name=".ui.mine.activity.WriteOffTeaOrderActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--抽奖活动-->
+        <activity
+            android:name=".ui.mine.activity.LotteryActiveActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--抽奖活动/中奖名单-->
+        <activity
+            android:name=".ui.mine.activity.LotteryListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--消息列表-->
+        <activity
+            android:name=".ui.home.activity.MessageListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--系统消息列表-->
+        <activity
+            android:name=".ui.home.activity.MessageSystemActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme" />
+        <!--奶茶订单-未支付页面-->
+
+        <!--奶茶订单-已支付页面详情-->
+        <!--发布普通服务页面-->
+        <activity
+            android:name=".ui.service.activity.ReleaseNormalServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--发布家政服务页面-->
+        <activity
+            android:name=".ui.service.activity.ReleaseDomesticServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--更多服务-->
+        <activity
+            android:name=".ui.service.activity.MoreServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--发布过渡页-->
+        <activity
+            android:name=".ui.service.activity.TransitionPageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--选择预约地址-->
+        <activity
+            android:name=".ui.service.activity.ReservationAddressActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--选择赴约用户-->
+        <activity
+            android:name=".ui.service.activity.ChooseServiceUserActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--发布动态-->
+        <activity
+            android:name=".ui.tea.activity.AddDynamicActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--加入服务-->
+        <activity
+            android:name=".ui.service.activity.JoinServiceActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--用户短视频-->
+        <activity
+            android:name=".ui.service.activity.UserShortVideoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--聊天充值-->
+        <activity
+            android:name=".ui.service.activity.RechargeIMActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--创业商城-->
+        <activity
+            android:name=".ui.service.activity.VentureShopActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--创业商城商品详情-->
+        <activity
+            android:name=".ui.service.activity.VentureShopGoodsDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/customTheme"/>
+        <!--聊天页面-->
+        <activity
+            android:name="com.benben.yishanbang.ui.service.activity.ChatActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/BaseThemes"/>
+
+        <!-- Since JCore2.0.0 Required SDK核心功能-->
+        <!-- 这个Service要继承JCommonService -->
+        <service android:name="com.benben.yishanbang.service.JMessageService"
+            android:process=":pushcore">
+            <intent-filter>
+                <action android:name="cn.jiguang.user.service.action" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

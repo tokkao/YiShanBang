@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_bg"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true">
+
+    <include
+        android:id="@+id/llyt_title_bar"
+        layout="@layout/common_title_bar"/>
+
+    <ImageView
+        android:id="@+id/iv_settings_logo"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@mipmap/icon_app_logo"
+        android:layout_below="@id/llyt_title_bar"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="TODO" />
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
+        android:layout_below="@id/iv_settings_logo"
+        android:text="公司简介"
+        android:textSize="16sp"
+        android:textColor="@color/color_333333"/>
+
+    <View
+        android:id="@+id/view_indicator"
+        android:layout_width="25dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_intro"
+        android:background="@color/theme"/>
+    <TextView
+        android:id="@+id/tv_intro_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_below="@id/view_indicator"
+        android:gravity="center"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp"
+        android:lineSpacingExtra="3dp"
+        android:text="公司简介公司简介公司简介公司简介公司简介公司简介
+公司简介公司简介公司简介公司简介公司简介公司简介公司
+简介公司简介简介公司简介公司简介公司简介公司简介公司
+简介公司简介公司简介。"
+        android:textSize="13sp"
+        android:textColor="@color/color_666666"/>
+
+    <TextView
+        android:id="@+id/tv_copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:text="版权所有©2018-2020&#160;&#160;犇犇科技有限公司"
+        android:layout_marginBottom="60dp"
+        android:textSize="13sp"
+        android:textColor="@color/color_999999"/>
+
+</RelativeLayout>

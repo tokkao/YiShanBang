@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F5F5F5"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_title_bar" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_avatar"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            app:cardElevation="2dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="头像"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <com.benben.commoncore.widget.CircleImageView
+                    android:id="@+id/civ_avatar"
+                    android:layout_width="51dp"
+                    android:layout_height="51dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="20dp"
+                    android:src="@mipmap/icon_default_avatar" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/color_FFFFFF"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llyt_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="昵称"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edt_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawableRight="@mipmap/icon_nickname_input"
+                    android:drawablePadding="10dp"
+                    android:gravity="right|center_vertical"
+                    android:hint="昵称"
+                    android:inputType="text"
+                    android:maxLength="8"
+                    android:maxLines="1"
+                    android:minWidth="100dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="13dp"
+                android:background="@color/view_line" />
+
+            <LinearLayout
+                android:id="@+id/llyt_sex"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="性别"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_sex"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@mipmap/icon_small_right_arrow"
+                    android:drawablePadding="16dp"
+                    android:gravity="right|center_vertical"
+                    android:hint="女"
+                    android:maxLines="1"
+                    android:minWidth="100dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="13dp"
+                android:background="@color/view_line" />
+
+
+            <LinearLayout
+                android:id="@+id/llyt_constellations"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="星座"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/tv_constellations"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableRight="@mipmap/icon_small_right_arrow"
+                    android:drawablePadding="16dp"
+                    android:gravity="right|center_vertical"
+                    android:hint="巨蟹座"
+                    android:maxLines="1"
+                    android:minWidth="100dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="13dp"
+                android:background="@color/view_line" />
+
+            <LinearLayout
+                android:id="@+id/llyt_age"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="年龄"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edt_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入年龄"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:minWidth="100dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="13dp"
+                android:background="@color/view_line" />
+
+            <LinearLayout
+                android:id="@+id/llyt_height"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="身高"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edt_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入身高"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:minWidth="100dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="13dp"
+                android:background="@color/view_line" />
+
+            <LinearLayout
+                android:id="@+id/llyt_weight"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="@color/white_bg"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:text="体重"
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edt_weight"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:drawablePadding="5dp"
+                    android:gravity="right|center_vertical"
+                    android:hint="请输入体重"
+                    android:inputType="number"
+                    android:maxLines="1"
+                    android:minWidth="100dp"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="12dp"
+                    android:textColor="@color/color_999999"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="13dp"
+                android:background="@color/view_line" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:drawableRight="@mipmap/icon_small_right_arrow"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="13dp"
+                android:text="收货地址"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp"
+                android:visibility="visible" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="13dp"
+                android:background="@color/view_line"
+                android:visibility="visible" />
+
+            <TextView
+                android:id="@+id/tv_modify_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:drawableRight="@mipmap/icon_small_right_arrow"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="13dp"
+                android:text="更改手机"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="13dp"
+                android:background="@color/view_line" />
+
+            <TextView
+                android:id="@+id/tv_auth"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:drawableRight="@mipmap/icon_small_right_arrow"
+                android:gravity="center_vertical"
+                android:paddingLeft="12dp"
+                android:paddingRight="13dp"
+                android:text="认证"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+
+    <LinearLayout
+        android:id="@+id/llyt_cate"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="店铺分类"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+        <TextView
+            android:id="@+id/tv_store_category"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:drawableRight="@mipmap/icon_right_arrow"
+            android:gravity="center_vertical|right"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text=""
+            android:drawablePadding="10dp"
+            android:textColor="@color/color_666666"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_introduction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="16dp"
+            android:text="店铺介绍"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/tv_introduction"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_feed_back_edit_bg"
+            android:gravity="top"
+            android:hint="请输入介绍"
+            android:padding="15dp"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_CCCCCC"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_service_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="16dp"
+            android:text="客服信息"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_service_info"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_below="@id/tv_service_info"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_feed_back_edit_bg"
+            android:gravity="top"
+            android:hint="请输入客服信息"
+            android:padding="15dp"
+            android:textColor="@color/color_333333"
+            android:textColorHint="@color/color_CCCCCC"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/shape_radius5_green_7dd33c"
+        android:text="提交"
+        android:textColor="@color/text_white"
+        android:textSize="15sp" />
+</LinearLayout>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/img_lottery_confirm_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="抽奖"
+                    android:textColor="#FFF2C7"
+                    android:textSize="25sp" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="200dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_prize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="抽取奖项为：-"
+                        android:textColor="#E46B00"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tv_current_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:text="已抽取：0名"
+                        android:textColor="#E46B00"
+                        android:textSize="17sp" />
+
+                    <TextView
+                        android:id="@+id/tv_remain_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:text="本奖项剩余：0名"
+                        android:textColor="#E46B00"
+                        android:textSize="17sp" />
+
+                    <Button
+                        android:id="@+id/btn_lottery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:background="@mipmap/icon_lottery_btn_bg"
+                        android:text="抽奖"
+                        android:paddingBottom="7dp"
+                        android:textColor="@color/color_FFFFFF"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <ImageView
+                android:id="@+id/iv_close_dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:src="@mipmap/icon_close_dialog"/>
+        </LinearLayout>
+
+    </FrameLayout>
+
+
+</RelativeLayout>

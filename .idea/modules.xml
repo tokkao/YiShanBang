@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/YiShanBang.iml" filepath="$PROJECT_DIR$/YiShanBang.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/benbencommoncore/benbencommoncore.iml" filepath="$PROJECT_DIR$/benbencommoncore/benbencommoncore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chatapp/chatapp.iml" filepath="$PROJECT_DIR$/chatapp/chatapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/emoji/emoji.iml" filepath="$PROJECT_DIR$/emoji/emoji.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ijkplayerlibrary/ijkplayerlibrary.iml" filepath="$PROJECT_DIR$/ijkplayerlibrary/ijkplayerlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reclib-qq/reclib-qq.iml" filepath="$PROJECT_DIR$/reclib-qq/reclib-qq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/reclib-testemoticons/reclib-testemoticons.iml" filepath="$PROJECT_DIR$/reclib-testemoticons/reclib-testemoticons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/superplayerlibrary/superplayerlibrary.iml" filepath="$PROJECT_DIR$/superplayerlibrary/superplayerlibrary.iml" />
+    </modules>
+  </component>
+</project>

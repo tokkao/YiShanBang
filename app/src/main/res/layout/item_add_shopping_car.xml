@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/btn_normal_temp"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:background="@drawable/shape_5radious_border_e5e5e5"
+        android:gravity="center"
+        android:text="加冰"
+        android:textColor="@color/color_666666"
+        android:textSize="14sp"/>
+</LinearLayout>

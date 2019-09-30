@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#7CD33C</color>
+    <color name="colorPrimaryDark">#7CD33C</color>
+    <color name="colorAccent">#7CD33C</color>
+
+    <!--主题色-->
+    <color name="theme">#7CD33C</color>
+    <!--下划线颜色-->
+    <color name="view_line">#E6E6E6</color>
+    <!--背景色-->
+    <color name="bg_color">#F4F4F4</color>
+
+    <!--二维码的背景色-->
+    <color name="qr_code_state">#909193</color>
+    <!--金额-->
+    <color name="money_color">#F67617</color>
+
+</resources>

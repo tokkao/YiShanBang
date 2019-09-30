@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        debug {
+            keyAlias 'yishanbang'
+            keyPassword '123456'
+            storeFile file('yishanbang.jks')
+            storePassword '123456'
+        }
+    }
+    compileSdkVersion 28
+    buildToolsVersion "28.0.1"
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdk
+        targetSdkVersion rootProject.ext.targetSdk
+        versionCode rootProject.ext.version_code
+        versionName rootProject.ext.version_name
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a"//,"x86", "x86_64","arm64-v8a",
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: "com.benben.yishanbang",
+                JPUSH_APPKEY : "055d08738efbdef8d01bd317", //JPush上注册的包名对应的appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
+    }
+    sourceSets {
+        main {
+//            jni.srcDirs = ['libs']
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+    /*  packagingOptions {
+          exclude  'lib/armeabi-v7a/libijkplayer.so'
+          exclude  'lib/armeabi-v7a/libijkffmpeg.so'
+          exclude  'lib/armeabi-v7a/libijksdl.so'
+          exclude  'lib/armeabi/libijkplayer.so'
+          exclude  'lib/armeabi/libijkffmpeg.so'
+          exclude  'lib/armeabi/libijksdl.so'
+      }*/
+}
+
+dependencies {
+//    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':benbencommoncore')
+
+    //implementation 'com.tencent.bugly:crashreport:latest.release'
+    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.1.9
+    //implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+
+    //recyclerview
+    implementation 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+//    compileOnly 'cn.bingoogolapple:bga-qrcode-zxing:1.3.4'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.0.0'
+
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.4'
+
+    implementation files('libs/umeng-share-core-6.9.4.jar')
+    implementation files('libs/umeng-share-wechat-simplify-6.9.4.jar')
+    implementation files('libs/umeng-shareboard-widget-6.9.4.jar')
+    implementation files('libs/umeng-sharetool-6.9.4.jar')
+    implementation files('libs/umeng-share-QQ-simplify-6.9.4.jar')
+    implementation files('libs/wechat-sdk-android-with-mta-1.0.2.jar')
+    implementation files('libs/umeng-common-2.0.2.jar')
+    implementation project(':superplayerlibrary')
+
+    implementation 'com.github.addappcn:android-pickers:1.0.3'
+    implementation files('libs/alipaySdk-20180601.jar')
+    //阴影控件
+    implementation 'com.lijiankun24:shadowlayout:1.1.0'
+    //ios switchbutton
+    implementation 'com.github.zcweng:switch-button:0.0.3@aar'
+    //PickerView
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    //rating bar
+    implementation 'com.hedgehog.ratingbar:app:1.1.2'
+    //图片选择
+    implementation 'com.github.LuckSiege.PictureSelector:picture_library:v2.2.3'
+//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
+
+     implementation project(path:':chatapp')
+    //极光聊天
+//    implementation 'cn.jiguang.sdk:jmessage:2.9.0'
+//    implementation 'cn.jiguang.sdk:jcore:2.1.4'
+
+    compile files('libs/BaiduLBS_Android.jar')
+}

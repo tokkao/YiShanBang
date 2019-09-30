@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/img_require_release_bg"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="90dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="90dp"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_top_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="fitXY"
+                        android:src="@mipmap/img_release_demestic_service_top_bg" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="20dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_service_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="家政服务"
+                            android:textColor="@color/color_333333"
+                            android:textSize="20sp" />
+
+                        <ImageView
+                            android:id="@+id/iv_select_service_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="16dp"
+                            android:src="@mipmap/ic_select_service_type" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:drawableLeft="@drawable/dot_green"
+                        android:drawableRight="@mipmap/icon_right_arrow"
+                        android:drawablePadding="6dp"
+                        android:ellipsize="end"
+                        android:paddingLeft="15dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="预约地址"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+
+                    <EditText
+                        android:id="@+id/edt_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:background="@android:color/white"
+                        android:hint="备注内容"
+                        android:inputType="text"
+                        android:paddingLeft="28dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:drawableRight="@mipmap/icon_right_arrow"
+                        android:drawablePadding="6dp"
+                        android:ellipsize="end"
+                        android:paddingLeft="28dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="预约时间"
+                        android:textColor="@color/color_999999"
+                        android:textSize="14sp" />
+
+
+
+                    <TextView
+                        android:id="@+id/tv_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:ellipsize="end"
+                        android:paddingLeft="28dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="5dp"
+                        android:singleLine="true"
+                        android:text="意向金：300元"
+                        android:textColor="@color/color_333333"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="20dp"
+            android:src="@mipmap/ic_close_release_service" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlyt_release"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/shape_oval_service_release_btn_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发布"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+</RelativeLayout>

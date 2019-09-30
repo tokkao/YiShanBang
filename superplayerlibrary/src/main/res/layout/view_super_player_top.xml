@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/app_video_top_box"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#88000000"
+    android:orientation="horizontal"
+    android:visibility="visible">
+
+    <ImageView
+        android:id="@+id/app_video_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:paddingLeft="10dp"
+        android:paddingTop="40dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:src="@drawable/ic_back" />
+
+    <LinearLayout
+        android:id="@+id/view_jky_player_top_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/view_jky_play_iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/ic_setting"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/view_jky_player_iv_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:src="@drawable/ic_share"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <com.superplayer.library.utils.VideoLogoUtils
+        android:id="@+id/iv_logo"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="38dp"
+        android:layout_marginRight="13dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/app_video_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/app_video_finish"
+        android:ellipsize="end"
+        android:gravity="left"
+        android:paddingLeft="10dp"
+        android:paddingTop="40dp"
+        android:paddingRight="10dp"
+        android:layout_toLeftOf="@id/iv_logo"
+        android:maxLines="1"
+        android:paddingBottom="22dp"
+        android:singleLine="true"
+        android:text="标题"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

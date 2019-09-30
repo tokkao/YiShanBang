@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <com.benben.commoncore.widget.CircleImageView
+        android:id="@+id/civ_avatar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@mipmap/icon_default_avatar"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户昵称"
+        android:layout_marginLeft="20dp"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textColor="@color/color_333333"
+        android:textSize="12sp"/>
+
+
+</LinearLayout>

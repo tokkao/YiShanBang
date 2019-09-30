@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F5F5F5"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_title_bar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_bar"
+        android:background="@color/color_FFFFFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_my_skills"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:drawableRight="@mipmap/icon_small_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="我的技能"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="13dp"
+            android:background="@color/view_line" />
+
+
+        <TextView
+            android:id="@+id/tv_release_order"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:drawableRight="@mipmap/icon_small_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="我发布的家政订单"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="13dp"
+            android:background="@color/view_line" />
+
+        <TextView
+            android:id="@+id/tv_accept_order"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:drawableRight="@mipmap/icon_small_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="我接受的家政订单"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="13dp"
+            android:background="@color/view_line" />
+
+
+        <TextView
+            android:id="@+id/tv_release_task"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:drawableRight="@mipmap/icon_small_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="我发布的任务"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="13dp"
+            android:background="@color/view_line" />
+
+        <TextView
+            android:id="@+id/tv_accept_task"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:drawableRight="@mipmap/icon_small_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="我接受的任务"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="13dp"
+            android:background="@color/view_line" />
+
+        <TextView
+            android:id="@+id/tv_make_money"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:drawableRight="@mipmap/icon_small_right_arrow"
+            android:gravity="center_vertical"
+            android:paddingLeft="13dp"
+            android:paddingRight="13dp"
+            android:text="赚钱攻略"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

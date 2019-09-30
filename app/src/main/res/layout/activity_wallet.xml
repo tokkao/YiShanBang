@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_avatar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:text="账户余额："
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_balance"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="13dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text=" ¥200"
+                android:textColor="@color/money_color"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:id="@+id/rlyt_withdraw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="13dp"
+                android:background="@drawable/shape_3radius_theme_bg">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="9dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginRight="9dp"
+                    android:layout_marginBottom="6dp"
+                    android:text="提现"
+                    android:textColor="@color/color_FFFFFF"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="13dp"
+        android:paddingRight="13dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="充值金额"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ¥"
+                android:textColor="@color/color_333333"
+                android:textSize="25sp" />
+
+            <EditText
+                android:id="@+id/edt_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@color/white"
+                android:hint="请输入充值金额"
+                android:inputType="number"
+                android:paddingLeft="10dp"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColor="@color/color_333333"
+                android:textColorHint="@color/color_CCCCCC"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="15dp"
+            android:text="选择交易方式"
+            android:textColor="@color/color_333333"
+            android:textSize="16sp" />
+
+
+        <TextView
+            android:id="@+id/tv_alipay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:drawableLeft="@mipmap/icon_alipay"
+            android:drawableRight="@drawable/selector_checkbox_select_status"
+            android:drawablePadding="13dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="11dp"
+            android:paddingRight="14dp"
+            android:text="支付宝支付"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="13dp"
+            android:background="@color/view_line" />
+
+        <TextView
+            android:id="@+id/tv_wxpay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:drawableLeft="@mipmap/icon_wxpay"
+            android:drawableRight="@drawable/selector_checkbox_select_status"
+            android:drawablePadding="13dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="11dp"
+            android:paddingRight="14dp"
+            android:text="微信支付"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/rlyt_recharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/shape_3radius_theme_bg">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="9dp"
+                android:text="充值"
+                android:textColor="@color/color_FFFFFF"
+                android:textSize="13sp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_my_discount_card"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:drawableRight="@mipmap/icon_small_right_arrow"
+        android:gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingRight="13dp"
+        android:text="我的优惠卡"
+        android:textColor="@color/color_333333"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_pay_setting"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginRight="13dp"
+        android:background="@drawable/shape_radius5_green_7dd33c"
+        android:text="支付设置"
+        android:textColor="@color/text_white"
+        android:textSize="15sp" />
+</LinearLayout>

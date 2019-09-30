@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/llyt_title_bar"
+        layout="@layout/common_title_bar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.lijiankun24.shadowlayout.ShadowLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="45dp"
+                app:shadowColor="#997DD33C"
+                app:shadowDx="1dp"
+                app:shadowDy="1dp"
+                app:shadowRadius="3dp"
+                app:shadowShape="rectangle"
+                app:shadowSide="left|right|top|bottom">
+
+                <LinearLayout
+                    android:layout_width="270dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_radius5_white_ffffff"
+                    android:orientation="vertical"
+                    android:padding="25dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:text="活动周期："
+                            android:textColor="@color/color_666666"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_status"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="进行中"
+                            android:textColor="@color/money_color"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_active_start_period"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="-"
+                            android:textColor="@color/color_333333"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_active_end_period"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:text="至-"
+                            android:textColor="@color/color_333333"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:text="活动抽奖时间："
+                        android:textColor="@color/color_666666"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_active_start_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="-"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_weight="1"
+                        android:text="已累计用户："
+                        android:textColor="@color/color_666666"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tv_user_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="0"
+                        android:textColor="@color/color_333333"
+                        android:textSize="15sp" />
+
+                </LinearLayout>
+            </com.lijiankun24.shadowlayout.ShadowLayout>
+
+            <com.lijiankun24.shadowlayout.ShadowLayout
+                android:id="@+id/shadow_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                app:shadowColor="#997DD33C"
+                app:shadowDx="1dp"
+                app:shadowDy="1dp"
+                app:shadowRadius="3dp"
+                app:shadowShape="rectangle"
+                app:shadowSide="left|right|top|bottom">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rlv_price_goods"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="13dp" />
+
+            </com.lijiankun24.shadowlayout.ShadowLayout>
+
+            <Button
+                android:id="@+id/btn_start_lottery"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginLeft="53dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="53dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/shape_radius5_green_7dd33c"
+                android:text="开始抽奖"
+                android:textColor="@color/text_white"
+                android:textSize="15sp" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

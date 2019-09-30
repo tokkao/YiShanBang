@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.benben.yishanbang.widget.CustomImageViewFive
+                android:id="@+id/iv_img"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_goods_detail" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/bg_color" />
+
+            <LinearLayout
+                android:id="@+id/ll_free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="12dp"
+                    android:text="商品单价："
+                    android:textColor="@color/color_333333"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="12dp"
+                    android:paddingRight="13dp"
+                    android:text="免费 / 一次"
+                    android:textColor="#F67617"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_charge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="bottom"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="13dp"
+                    android:paddingTop="12dp"
+                    android:text="¥"
+                    android:textColor="#fff67617"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_QRPage_detail_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="12dp"
+                    android:text="38"
+                    android:textColor="#fff67617"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingTop="15dp"
+                android:paddingRight="13dp"
+                android:text="心相印抽纸 经典系列 2层200抽面巾纸*6包"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="13dp"
+                android:paddingTop="14dp"
+                android:paddingRight="13dp"
+                android:text="商品数量：1"
+                android:textColor="@color/color_999999"
+                android:textSize="13sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/bg_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_left_dot_theme"
+                    android:drawableRight="@mipmap/ic_right_dot_theme"
+                    android:drawablePadding="8dp"
+                    android:gravity="center"
+                    android:text="商品介绍"
+                    android:textColor="@color/color_333333"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="10dp"
+                android:lineSpacingMultiplier="1"
+                android:paddingLeft="13dp"
+                android:paddingTop="15dp"
+                android:paddingRight="13dp"
+                android:text="商品介绍内容商品介绍内容商品介绍内容商品商品介绍内容商品介绍内容商品介绍内容商品商品介绍内容商品介绍内容商品介绍内容商品商品介绍内容商品介绍内容商品介绍内容商品商品介绍内容商品介绍内容商品介绍内容商品商品介绍内容商品介绍内容商品。"
+                android:textColor="#ff333333"
+                android:textSize="13sp" />
+
+            <!--<com.benben.yishanbang.widget.CustomRecyclerView
+                android:id="@+id/rv_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="13dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="13dp"
+                android:layout_marginBottom="15dp">
+
+            </com.benben.yishanbang.widget.CustomRecyclerView>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="181dp"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/tv_QRPage_detail_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="心相印经典系列"
+                        />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="货号："
+                            />
+                        <TextView
+                            android:id="@+id/tv_QRPage_detail_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxxxxxxxxxxxxxxxxxxxxxxx"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产品成分："
+                            />
+                        <TextView
+                            android:id="@+id/tv_QRPage_detail_element"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxxxxxxxxxxxxxxxxx"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="压花香型："
+                            />
+                        <TextView
+                            android:id="@+id/tv_QRPage_detail_fragrance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxxxxxxxxxxxxxxxxxx"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="规格："
+                            />
+                        <TextView
+                            android:id="@+id/tv_QRPage_detail_specification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxxxxxxxxxxxxxxxxxxxxxxx"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="数量："
+                            />
+                        <TextView
+                            android:id="@+id/tv_QRPage_detail_goods_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxxxxxxxxxxxxxxxxxxxxxxx"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="保质期:"
+                            />
+                        <TextView
+                            android:id="@+id/tv_QRPage_detail_expiration_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="xxxxxxxxxxxxxxxxxxxxxxxx"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/ic_QRPage_detail_buttom_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:src="@mipmap/ic_default_pic"
+                    android:scaleType="centerCrop"
+                    />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="13dp"
+                android:background="@color/bg_color" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_receiver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F67617"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="立即出货"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_pay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_alipay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_alipay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_pay_alipay"
+                android:drawablePadding="14dp"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:text="支付宝支付"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@color/view_line" />
+
+        <LinearLayout
+            android:id="@+id/ll_wxpay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_wxpay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/ic_pay_wxpay"
+                android:drawablePadding="14dp"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp"
+                android:text="微信支付"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

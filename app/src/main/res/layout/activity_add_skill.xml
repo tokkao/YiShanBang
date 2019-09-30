@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_F5F5F5"
+    android:clipToPadding="true"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/white_bg"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:text="技能名称"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/edt_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:drawablePadding="5dp"
+                android:hint="请输入技能名称"
+                android:inputType="text"
+                android:maxLength="8"
+                android:maxLines="1"
+                android:paddingLeft="12dp"
+                android:textColor="@color/color_999999"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="13dp"
+            android:background="@color/view_line" />
+
+
+        <LinearLayout
+            android:id="@+id/llyt_skill_level"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:paddingRight="13dp"
+                android:text="技能等级"
+                android:textColor="@color/color_333333"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_skill_level_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:src="@mipmap/ic_level_logo"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_skill_level"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:drawableRight="@mipmap/icon_right_arrow"
+                android:drawablePadding="10dp"
+                android:gravity="center_vertical"
+                android:paddingRight="13dp"
+                android:text=""
+                android:textColor="@color/theme"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_certificate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="16dp"
+            android:text="技能证书"
+            android:textColor="@color/color_333333"
+            android:textSize="15sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rlv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_certificate"
+            android:layout_marginLeft="13dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="13dp"
+            android:layout_marginBottom="8dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+</LinearLayout>

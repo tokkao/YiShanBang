@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tv_choose_goods_left"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="店长推荐"
+        android:textColor="#333333"
+        android:textSize="15sp" />
+
+    <View
+        android:id="@+id/vw_icon"
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:background="@color/colorGreen"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="100dp"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="#E6E5E5" />
+</RelativeLayout>

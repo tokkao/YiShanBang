@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="95dp">
+
+    <ImageView
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:src="@mipmap/ic_launcher"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="芒果奶茶"
+        android:textSize="15sp"
+        android:textColor="#333333"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="价格"
+        android:layout_marginLeft="125dp"
+        android:layout_marginTop="54dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="历史价格"
+        android:layout_marginLeft="165dp"
+        android:layout_marginTop="54dp"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="13dp"
+        android:layout_marginTop="70dp"
+        android:src="@mipmap/ic_add_goods"
+        />
+
+</RelativeLayout>

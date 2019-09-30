@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:androitd="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_title_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="67dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="108dp"
+                    android:layout_height="90dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_shop_lottery"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@mipmap/icon_my_window"
+                        android:drawablePadding="15dp"
+                        android:gravity="center"
+                        android:text="店铺管理"
+                        android:textColor="@color/color_333333"
+                        android:textSize="13sp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="108dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="54dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/tv_discount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@mipmap/icon_discount_card"
+                        android:drawablePadding="15dp"
+                        android:gravity="center"
+                        android:text="优惠卡查看"
+                        android:textColor="@color/color_333333"
+                        android:textSize="13sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="45dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="108dp"
+                    android:layout_height="90dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/tv_order_manage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@mipmap/icon_order_manage"
+                        android:drawablePadding="15dp"
+                        android:gravity="center"
+                        android:text="订单管理"
+                        android:textColor="@color/color_333333"
+                        android:textSize="13sp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="108dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="54dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/tv_user_manage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@mipmap/icon_user_manage"
+                        android:drawablePadding="15dp"
+                        android:gravity="center"
+                        android:text="客户管理"
+                        android:textColor="@color/color_333333"
+                        android:textSize="13sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="45dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="108dp"
+                    android:layout_height="90dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/tv_data_report"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@mipmap/icon_data_report"
+                        android:drawablePadding="15dp"
+                        android:gravity="center"
+                        android:text="数据报表"
+                        android:textColor="@color/color_333333"
+                        android:textSize="13sp" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="108dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="54dp"
+                    app:cardCornerRadius="3dp"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:id="@+id/tv_writing_off_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableTop="@mipmap/icon_writing_off_order"
+                        android:drawablePadding="15dp"
+                        android:gravity="center"
+                        android:text="核销订单"
+                        android:textColor="@color/color_333333"
+                        android:textSize="13sp" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true">
+
+            <!--<com.lijiankun24.shadowlayout.ShadowLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="67dp"
+                app:shadowShape="oval"
+                app:shadowColor="#997DD33C"
+                app:shadowSide="all"
+                app:shadowDx="0dp"
+                app:shadowDy="2dp">-->
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="67dp">
+
+                    <ImageView
+                        android:id="@+id/iv_setting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_margin="9dp"
+                        android:src="@mipmap/icon_shop_center_setting" />
+                </RelativeLayout>
+
+          <!--  </com.lijiankun24.shadowlayout.ShadowLayout>-->
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

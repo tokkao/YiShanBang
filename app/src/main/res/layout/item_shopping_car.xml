@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="1dp"
+        android:background="#E5E5E5" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="13dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_good_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="芒果奶茶"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tv_good_norms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="大杯/无糖/常温"
+                android:textColor="#666666"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="11dp"
+            android:gravity="right|center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥ 18"
+                android:textColor="#F67617"
+                android:textSize="16sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_old_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="¥ 38"
+                    android:textColor="#666666" />
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/iv_count_cut"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="13dp"
+                android:src="@mipmap/ic_minus_goods" />
+
+            <TextView
+                android:id="@+id/tv_count_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13dp"
+                android:text="1"
+                android:textColor="#333333"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/iv_count_add"
+                android:layout_width="19dp"
+                android:layout_height="19dp"
+                android:layout_marginRight="13dp"
+                android:src="@mipmap/ic_add_goods" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
